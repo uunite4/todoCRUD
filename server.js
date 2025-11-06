@@ -1,5 +1,6 @@
 import express from 'express';
 import todos from './routes/todos.js';
+import categs from './routes/categs.js';
 
 const app = express();
 const port = 8000;
@@ -21,7 +22,8 @@ app.get('/todo', (req, res) => {
 });
 
 // API
-app.use('/api/todos', todos);
+app.use('/api/todo', todos);
+app.use('/api/categories', categs);
 
 app.listen(port, () => {
   console.log(`Todo app is running on port ${port}`);

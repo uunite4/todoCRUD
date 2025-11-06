@@ -8,6 +8,8 @@ export const getTodos = async (req, res, next) => {
   res.status(200).json(allTodos);
 };
 
+// @dec     Get todo by id
+// @route   GET /api/todo/:id
 export const getTodo = async (req, res, next) => {
   const allTodos = await readTodo();
   const todoId = req.params.id;
