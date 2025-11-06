@@ -37,12 +37,12 @@ export const writeDB = async (data) => {
 // Todos only
 export const writeTodo = async (data) => {
   const currentCateg = await readCateg();
-  const newDB = { categories: currentCateg, todo: data };
+  const newDB = { todo: data, categories: currentCateg };
   await writeDB(newDB);
 };
 // Categories only
 export const writeCateg = async (data) => {
   const currentTodo = await readTodo();
-  const newDB = { categories: data, todo: currentTodo };
+  const newDB = { todo: currentTodo, categories: data };
   await writeDB(newDB);
 };

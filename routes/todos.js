@@ -1,30 +1,27 @@
 import express from 'express';
-import { getTodos, getTodo } from '../controllers/todoController.js';
+import {
+  getTodos,
+  getTodo,
+  createTodo,
+  updateTodo,
+  deleteTodo,
+} from '../controllers/todoController.js';
 
 const router = express.Router();
 
-// GET ALL TODOS
+// GET ALL TODOS (query: categoryId)
 router.get('/', getTodos);
 
 // GET TODO BY ID
 router.get('/:id', getTodo);
 
 // CREATE NEW TODO
-// router.post('/');
+router.post('/', createTodo);
 
 // UPDATE TODO (INCLUDING COMPLETION)
-// router.put('/:id');
+router.put('/:id', updateTodo);
 
-// // GET TODO BY ID
-// router.get('/:id');
-
-// // CREATE NEW TODO
-// router.post('/');
-
-// // UPDATE TODO (INCLUDING COMPLETION)
-// router.put('/:id');
-
-// // DELETE TODO
-// router.delete('/:id');
+// DELETE TODO
+router.delete('/:id', deleteTodo);
 
 export default router;
