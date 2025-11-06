@@ -1,0 +1,39 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "name": "Take the dog out",
+      "category-id": 1,
+      "complete": false
+    },
+    {
+      "id": 2,
+      "name": "Do physics homework",
+      "category-id": 2,
+      "complete": false
+    },
+    {
+      "id": 3,
+      "name": "Go do a workout",
+      "category-id": 3,
+      "complete": false
+    }
+  ],
+  "categories": [
+    {
+      "name": "House Chores",
+      "id": 1,
+      "color": "#562b00"
+    },
+    {
+      "name": "School",
+      "id": 2,
+      "color": "#B22222"
+    },
+    {
+      "name": "Health",
+      "id": 3,
+      "color": "#228B22"
+    }
+  ]
+}
