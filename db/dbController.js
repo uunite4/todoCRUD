@@ -1,5 +1,9 @@
 import fs from 'fs/promises';
-const dbPath = './db/db.json';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const dbPath = path.join(__dirname, 'db.json');
 
 // -- READ --
 // Full DB
@@ -28,7 +32,7 @@ export const readCateg = async () => {
 export const writeDB = async (data) => {
   try {
     const jsonData = JSON.stringify(data, null, 2);
-    fs.writeFile(dbPath, jsonData, 'utf8');
+    await fs.writeFile(dbPath, jsonData, 'utf8');
   } catch (err) {
     console.error('Error writing JSON data: ', err);
   }
