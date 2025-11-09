@@ -7,6 +7,12 @@
       "complete": false
     },
     {
+      "id": 2,
+      "name": "Do physics homework",
+      "categoryId": 2,
+      "complete": false
+    },
+    {
       "id": 3,
       "name": "Go do a workout",
       "categoryId": 3,
@@ -23,7 +29,7 @@
     {
       "name": "House Chores",
       "id": 1,
-      "color": "#562b00"
+      "color": "#87522e"
     },
     {
       "name": "School",

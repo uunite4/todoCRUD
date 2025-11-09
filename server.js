@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 // Middleware
 app.use(logger);
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // HOMEPAGE
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'homepage', 'index.html'));

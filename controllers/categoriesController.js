@@ -4,7 +4,6 @@ import { readDB, readCateg } from '../db/dbController.js';
 // @route   GET /api/categories
 export const getCategs = async (req, res, next) => {
   const allCateg = await readCateg();
-  console.log(allCateg);
   res.status(200).json(allCateg);
 };
 
