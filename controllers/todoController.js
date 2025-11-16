@@ -77,7 +77,7 @@ export const updateTodo = async (req, res, next) => {
   // Update the item
   todoItem.name = name;
   todoItem.categoryId = parseInt(categoryId);
-  todoItem.complete = Boolean(parseInt(complete));
+  todoItem.complete = complete;
   // Update the item in the array
   const newTodos = allTodos.map((item) =>
     item.id == todoId ? todoItem : item

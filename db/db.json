@@ -22,7 +22,7 @@
       "id": 4,
       "name": "Clean the house",
       "categoryId": 1,
-      "complete": true
+      "complete": false
     }
   ],
   "categories": [
