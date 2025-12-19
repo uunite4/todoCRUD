@@ -23,13 +23,19 @@
       "name": "Clean the house",
       "categoryId": 1,
       "complete": false
+    },
+    {
+      "id": 5,
+      "name": "Hiiii",
+      "categoryId": 1,
+      "complete": false
     }
   ],
   "categories": [
     {
       "name": "House Chores",
       "id": 1,
-      "color": "#87522e"
+      "color": "#562b00"
     },
     {
       "name": "School",

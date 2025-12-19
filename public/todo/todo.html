@@ -8,6 +8,32 @@
     <title>Todo (full CRUD)</title>
   </head>
   <body>
+    <!--  --=+ MODALS +=--  -->
+    <!-- Add Todo Modal -->
+    <div class="modal-cont todomodal">
+      <div class="xbtn create-todo">X</div>
+      <div class="modal-part">
+        <h1 class="modal-title">What do you wanna do?</h1>
+        <input type="text" class="todo-name-input" />
+      </div>
+      <div class="modal-part">
+        <h1 class="modal-title">What category does your task fit into?</h1>
+        <div class="select-cat-btn-cont">
+          <p>CATEGORY SELECTED: <span></span></p>
+          <div>
+            <button class="select-cat-btn cat-btn">Select Category</button>
+            <button class="create-cat-btn cat-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <button class="create-todo-btn">+ create todo</button>
+    </div>
+
+    <!-- Select Category Modal -->
+    <div class="category-modal"></div>
+
+    <div class="blackscreen"></div>
+    <!--  --=+ MAIN BODY +=--  -->
     <div class="cont">
       <div class="mid-cont">
         <div class="title-cont">
