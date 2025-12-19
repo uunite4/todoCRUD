@@ -36,6 +36,7 @@ body {
 }
 
 .todo {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: var(--prim);
@@ -45,6 +46,29 @@ body {
   padding: 1rem;
   font-size: 1.4rem;
   box-shadow: 0px 5px 0px 0px var(--prim-dark);
+
+  transition: 200ms;
+}
+
+.todo::before {
+  bottom: 0px;
+  left: 0;
+  position: absolute;
+  content: 'Category';
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--categ-color); /* use the variable */
+  border-radius: 6px;
+  border-top-left-radius: 0px;
+  transition: bottom 200ms ease; /* animate movement */
+}
+
+.todo:hover {
+  border-bottom-left-radius: 0px;
+}
+
+.todo:hover::before {
+  bottom: -1.6rem;
 }
 
 @keyframes clickPulse {
@@ -87,12 +111,12 @@ body {
 .todo-cont {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 
   max-height: 60vh;
   overflow-y: auto;
   padding-inline: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
 
 /* WebKit browsers (Chrome, Edge, Safari) */
